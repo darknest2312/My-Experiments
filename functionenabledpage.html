@@ -20,9 +20,12 @@
             image.src = "pic_bulbon.gif"
         }
     }
+    var button_operator = "On"
     function buttonClick(number){
     	var button = document.getElementById("image")
-    	if (number==0){
+    	number == button_operator
+    	// var n = number.toString();
+    	if (number==button_operator){
     		button.src = "pic_bulboff.gif"
     	}
     	else{
@@ -30,9 +33,21 @@
     	}
 
     }
+
+    var buttons = "Off"
+    function buttonClickOn(number1){
+    	var button2 = document.getElementById('image')
+    	number1 == buttons
+    	if (number1==buttons){
+    		button2.src = "pic_bulbon.gif"
+    	}
+    	else{
+    		button2.src = "pic_bulboff.gif"
+    	}
+    }
 </script>
 <br>
-<button type="button" onclick="buttonClick(1)">Light On</button>
-<button type="button" onclick="buttonClick(0)">Light Off</button>
+<button type="button" onclick='buttonClick()'>Light On</button>
+<button type="button" onclick='buttonClickOn()'>Light Off</button>
 
 </html>
