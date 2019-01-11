@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Bulb Operator</title>
+</head>
+<h2>Welcome To Html Bulb Operator</h2>
+
+<p>You Can See Below A Bulb</p>
+<p>Please Click Below On the Given Bulb To Operate the Bulb</p>
+<p>Or please Click on the Buttons Provided To Operate The Bulb</p>
+<br>
+<img id="image" src="pic_bulboff.gif" width="100" height="180" onclick="changeImage()">
+<script>
+    function changeImage() {
+        var image = document.getElementById("image")
+        if (image.src.match("bulbon")) {
+            image.src = "pic_bulboff.gif"
+        }
+        else {
+            image.src = "pic_bulbon.gif"
+        }
+    }
+    function buttonClick(number){
+    	var button = document.getElementById("image")
+    	if (number==0){
+    		button.src = "pic_bulboff.gif"
+    	}
+    	else{
+    		button.src = "pic_bulbon.gif"
+    	}
+
+    }
+</script>
+<br>
+<button type="button" onclick="buttonClick(1)">Light On</button>
+<button type="button" onclick="buttonClick(0)">Light Off</button>
+
+</html>
