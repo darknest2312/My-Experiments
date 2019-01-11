@@ -21,7 +21,7 @@
         }
     }
     var button_operator = "On"
-    function buttonClick(number){
+    function buttonClickOn(number){
     	var button = document.getElementById("image")
     	number == button_operator
     	// var n = number.toString();
@@ -35,7 +35,7 @@
     }
 
     var buttons = "Off"
-    function buttonClickOn(number1){
+    function buttonClickOff(number1){
     	var button2 = document.getElementById('image')
     	number1 == buttons
     	if (number1==buttons){
@@ -47,7 +47,7 @@
     }
 </script>
 <br>
-<button type="button" onclick='buttonClick()'>Light On</button>
-<button type="button" onclick='buttonClickOn()'>Light Off</button>
+<button type="button" onclick='buttonClickOn()'>Light On</button>
+<button type="button" onclick='buttonClickOff()'>Light Off</button>
 
 </html>
