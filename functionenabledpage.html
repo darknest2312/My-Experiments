@@ -4,7 +4,7 @@
     <title>Bulb Operator</title>
 </head>
 <h2>Welcome To Html Bulb Operator</h2>
-
+<body>
 <p>You Can See Below A Bulb</p>
 <p>Please Click Below On the Given Bulb To Operate the Bulb</p>
 <p>Or please Click on the Buttons Provided To Operate The Bulb</p>
@@ -24,7 +24,6 @@
     function buttonClickOn(number){
     	var button = document.getElementById("image")
     	number == button_operator
-    	// var n = number.toString();
     	if (number==button_operator){
     		button.src = "pic_bulboff.gif"
     	}
@@ -45,9 +44,29 @@
     		button2.src = "pic_bulboff.gif"
     	}
     }
+
+    
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+    }
 </script>
 <br>
 <button type="button" onclick='buttonClickOn()'>Light On</button>
 <button type="button" onclick='buttonClickOff()'>Light Off</button>
 
+<hr>
+
+<form>
+    <h2>Feedback Form</h2>
+    <label><b>Enter your Name</b></label>
+    <textarea type="text" name="name" id="user_input" placeholder="Enter your Name..." style="height: 20px"></textarea><br><br>
+   <label><b>Please Provide Us Your Feedback</b></label><br>
+    <textarea name="subject" placeholder="Write something.." style="height:150px "></textarea>
+  </form>
+
+  <input type="submit" onclick="showInput();"><br><br>
+  <p>Thanks For Your Feedback, <span id='display'><b></b></span></p>
+
+</body>
 </html>
